@@ -4,7 +4,13 @@ Hi and thank you for checking out my portfolio! I'm a MSc CS student at Northeas
 ## Projects
 ### Rideshare simulator: Object-Oriented Design (Fall 2023)
 This project demonstrated the OOD principles we learned in Java. Here are some examples:
+Comparable and Comparator
+I used Comparable class because I was comparing a Java primitive (wait time). But if I was utilizing a more complicated comparison method, I would use a comparator with more functionality.
+```java
+public class Driver implements Comparable<Driver>
 
+public class RideRequest implements Comparable<RideRequest> 
+```
 Functional programming (lambdas and streams)
 ```java
     Double avgWaitTime = this.completedRideList.stream()
@@ -18,7 +24,7 @@ Functional programming (lambdas and streams)
 
 ```
 Creational, structural, and/or behavioral design patterns
-The only way to create Users was by creating Requests, and the only way to create Requests was by creating a RideRequestQueue. So this served to control how requests and user data was simulated. Likewise for the DriverDirectory and Driver data.
+The only way to add new Users was by creating new Requests, which requires creating a RideRequestQueue. Likewise for the DriverDirectory and Driver data. This controls how new objects are created in the simulation. 
 ```java
     public RideRequestQueue(int numberOfRequests){
         super(numberOfRequests);
@@ -27,14 +33,14 @@ The only way to create Users was by creating Requests, and the only way to creat
 ```
 
 MVC architecture
-The User and Driver classes contain all the simulated data. The Sim Controller class is the only class that interacts with the data. From the user input, the only View comes from the SimController's output to the simulation.
+The User and Driver classes store simulated data (Model). The Sim *Controller* class alone controls the simulation. A user can *View* the SimController's output via print statements.
 ```java
     System.out.println("Simulating 50 drivers and 50 riders:");
     SimController sim1 = new SimController(50, 50);
     System.out.println(sim1.printSimResults());
 ```
 
-### Course
+### 
 
 ## Contact
 Feel free to reach out:
