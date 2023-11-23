@@ -1,7 +1,7 @@
 # Welcome
 Hi and thank you for checking out my portfolio! I'm a MSc CS student at Northeastern University and graduate of Carnegie Mellon University. In between, I took CS courses at Tufts University. This portfolio reflects what I've learned across my academic career. I'm excited to add to it as I develop new skills.
 
-## Sample Projects
+## Sample of Projects
 ### Rideshare simulator: Object-Oriented Design (Summer 2023)
 This project's specification was to implement simulation for a rideshare backend in Java. There were several design choices for implementing the simulation, including how to represent the drivers and riders. The goal was to make it as realistic to something like Uber or Lyft as possible. Below are snippets of 4 of the OOD concepts we implemented (15 in total).
 
@@ -140,8 +140,62 @@ An intermediate step is generating arguments for each method, which could have a
     }
 ```
 
+### Six degrees of separation interactive simulation: Data Structures and Algorithms (Summer 2022)
+
+This project tested our understanding of graphs and their implementation in C++, as well as I/O using the command line. Each artist was a vertex in a graph of their musical collaborations. A user could find the shortest path between two artists by finding a chain of collaborations. The most fun part of this project was testing a large, well-connected graph to find paths between very different artists.
+
+```c++
+#ifndef __SIXDEGREES__
+#define __SIXDEGREES__
+/**
+Purpose: to traverse the CollabGraph and interface with terminal inputs and outputs, allowing a user to find paths between artists in the collab graph.
+**/
+
+#include "CollabGraph.h"
+#include "Artist.h"
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <stack>
+
+using namespace std;
+
+class SixDegrees{
+
+public:
+    SixDegrees();
+    SixDegrees(CollabGraph g);
+    ~SixDegrees();
+    SixDegrees(const SixDegrees& other);
+    SixDegrees &operator=(const SixDegrees rhs);
+    
+    void populate_graph(std::ifstream &data);
+    void print_graph(std::ostream &out);
+
+    string run(string command, vector<string> names);
+
+    string bfs(Artist &source, Artist & target);
+    string dfs(Artist &source, Artist & target);
+    string not_search(Artist & source, Artist & target, vector<string> names);
+private:
+    CollabGraph graph;
+
+    string print_path(Artist &source, Artist &dest);
+    bool dfs_search(Artist &source, Artist &target, Artist &current);
+    Artist find_artist(string name);
+};
+
+#endif
+```
+
+
 ## Contact
-Feel free to reach out:
+Thank you for taking a look at this portfolio. I truly appreciate your time and consideration, and I hope you found these examples to reflect your expectations. If you believe that I could contribute to your project or team, feel free and reach out to set up a meeting. If you'd like me to walk you through any of my work, I would also greatly appreciate any advice or comments to help me improve my skills.
+
 oelmady@gmail.com
+
 (203) 501-8244
+
 linkedin.com/in/omar-elmady
