@@ -2,7 +2,11 @@
 Hi and thank you for checking out my portfolio! I'm a MSc CS student at Northeastern University and graduate of Carnegie Mellon University. In between, I took CS courses at Tufts University. This portfolio reflects what I've learned across my academic career. I'm excited to add to it as I develop new skills.
 
 ## Sample of Projects
-### Rideshare simulator: Object-Oriented Design (Summer 2023)
+Below are a sample of the projects I've completed for class that reflect my coding abilities. To avoid plagiarism, I am keeping the files private, but I'd be happy to walk through the full projects with a technical recruiter. 
+
+Each project shown has its associated class, semester, and size. Then I walk through code snippets that reflect a few of the key concepts of the project. I hope you find this helpful in learning more about my coding skills!
+
+### Rideshare simulator: Object-Oriented Design (Summer 2023) [11 Java classes]
 This project's specification was to implement simulation for a rideshare backend in Java. There were several design choices for implementing the simulation, including how to represent the drivers and riders. The goal was to make it as realistic to something like Uber or Lyft as possible. Below are snippets of 4 of the OOD concepts we implemented (15 in total).
 
 *Comparable and Comparator*
@@ -47,7 +51,7 @@ The User and Driver classes store simulated data (Model). The Sim *Controller* c
     System.out.println(sim1.printSimResults());
 ```
 
-### Multi-threaded metro simulation: Software Engineering (Fall 2022)
+### Multi-threaded metro simulation: Software Engineering (Fall 2022) [19 Java classes]
 This project simulated a train system using Java threads. What stood out to me was how the train system could produce different outputs based on the internal thread queueing pattern. To make this work concurrently, I took a high-level view of a real train system: a train arrives at a station then stops, then passengers can board if they need to get on the train or deboard if they need to get off at that station, then the train closes its doors, and finally departs the station, heading for the next station. Organizing locks in a natural way made debugging more logical, because threads can be tricky to debug. I found it fun to design the components in the simulation, and to follow through on the implementation.
 
 Below is the code snippet for how a passenger thread would run through the simulation. I used clear variable names, so even without seeing the rest of the code, it is straightforward to read through it. For clarity, I added comments explaining the logic behind some fields.
@@ -91,7 +95,7 @@ Below is the code snippet for how a passenger thread would run through the simul
 ```
 
 
-### Unit testing framework: Software Engineering (Fall 2022)
+### Unit testing framework: Software Engineering (Fall 2022) []
 The framework implements two methods: testClass and quickCheckClass. Both methods utilize Java reflection to automatically test all the annotated methods in a given class. This project challenged me to carefully observe multiple layers of reflection and think more deeply about automation.
 
 Below, the quickCheckClass method generates paramters for each testable method in the class according to the annotations. First, we Map a method name String to its Method java object.
