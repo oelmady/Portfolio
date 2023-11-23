@@ -2,9 +2,8 @@
 Hi and thank you for checking out my portfolio! I'm a MSc CS student at Northeastern University and graduate of Carnegie Mellon University. In between, I took CS courses at Tufts University. This portfolio reflects what I've learned across my academic career. I'm excited to add to it as I develop new skills.
 
 ## Sample of Projects
-Below are a sample of the projects I've completed for class that reflect my coding abilities. To avoid plagiarism, I am keeping the files private. 
-
-Each project: class (semester) [size] has code snippets that reflect a few key concepts. If interested, I'd be happy to walk through the full project; just reach out! 
+I've sampled some class projects that I'm particularly proud of. (To avoid plagiarism, I cannot post project files online!)
+Each sample project: class (semester) [size] has code snippets and comments that explain how I implemented the project spec. If you'd like to learn more, I'd be happy to walk through the full project; just reach out.
 
 I hope you find this helpful in learning more about my coding skills!
 
